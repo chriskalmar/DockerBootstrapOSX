@@ -129,6 +129,12 @@ sudo /sbin/route delete -net 172.17.0.0 -netmask 255.255.0.0 -gateway $DOCKERIP 
 sudo /sbin/route -n add -net 172.17.0.0 -netmask 255.255.0.0 -gateway $DOCKERIP > /dev/null
 printOK
 
+printf "*** Configuring Docker for setup ..."
+export DOCKER_HOST=tcp://$DOCKERIP:2376
+export DOCKER_TLS_VERIFY=1
+export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
+printOK
+
 printf "*** Setting Boot2Docker VM as the DNS server for *.docker ..."
 sudo mkdir -p /etc/resolver
 echo "nameserver $DOCKERIP" | sudo tee /etc/resolver/docker >/dev/null
