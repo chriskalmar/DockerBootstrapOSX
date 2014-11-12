@@ -25,8 +25,8 @@ Make sure you have the latest version of [VirtualBox](http://virtualbox.org/wiki
 Then run the following commands:
 
 ```console
-	curl -s https://raw.githubusercontent.com/JonGretar/DockerBootstrapOSX/master/setup.sh -o setup_docker.sh
-	bash setup_docker.sh
+$ curl -s https://raw.githubusercontent.com/JonGretar/DockerBootstrapOSX/master/setup.sh -o setup_docker.sh
+$ bash setup_docker.sh
 ```
 
 ## What will you have after install
@@ -106,10 +106,10 @@ Now read up on Docker. It's pretty simple to get started from this point.
 To completely remove all this script does issue the following commands:
 
 ```console
-	boot2docker down
-	boot2docker delete
-	sudo rm /Library/LaunchDaemons/io.boot2docker.route.plist
-	sudo rm /etc/resolver/docker
+$ boot2docker down
+$ boot2docker delete
+$ sudo rm /Library/LaunchDaemons/io.boot2docker.route.plist
+$ sudo rm /etc/resolver/docker
 ```
 
 ## Credits
