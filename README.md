@@ -1,18 +1,23 @@
 # DockerBootstrapOSX
 
-DockerBootstrapOSX is a little bootstrapping that automates the installation of a Docker environment on a MacOS X machine.
+DockerBootstrapOSX is a little bootstrapping script that automates the installation of a Docker environment on a MacOS X machine.
 
 ## Quick Install
 
-Make sure you have the latest version of [VirtualBox](http://virtualbox.org/wiki/Downloads), Docker and Boot2Docker installed.
-
-I personally install using [Homebrew](http://brew.sh) with `brew install docker boot2docker`.
+Make sure you have the latest version of [VirtualBox](http://virtualbox.org/wiki/Downloads), Docker and Boot2Docker installed. I personally install using [Homebrew](http://brew.sh) with `brew install docker boot2docker`.
 
 Then run the following commands:
 
 	curl -s https://raw.githubusercontent.com/JonGretar/DockerBootstrapOSX/master/setup.sh -o setup_docker.sh
 	bash setup_docker.sh
 
+## Usage
+
+To shut down the virtual machine(it does take a bit of memory) use the command `boot2docker down` and to start it up again use `boot2docker up`.
+
+The containers may not start up automatically with the VM. To start them use the command `docker start dns log ui`.
+
+Now read up on Docker. It's pretty simple to get started from this point.
 
 ## What will you have after install
 
