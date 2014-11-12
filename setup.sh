@@ -28,7 +28,7 @@ function waitForDockerDaemon {
 }
 
 # Check if we are on OSX
-printf "*** Are we running on Mac OS X ... "
+printf "*** Are we running on MacOS X ... "
 if [[ $(uname -s) =~ Darwin ]]; then
 	printOK
 else
@@ -53,7 +53,18 @@ command -v boot2docker > /dev/null 2>&1 || {
 	echo "$(tput setaf 1)[FAIL]$(tput sgr0)"
 	echo ""
 	echo >&2 "boot2docker not found."
-	echo >&2 "Please install using 'brew install docker boot2docker'."
+	echo >&2 "Please install using 'brew install boot2docker'."
+	exit 1
+}
+printOK
+
+printf "*** Looking for Docker  ... "
+# check if boot2docker is installed
+command -v docker > /dev/null 2>&1 || {
+	echo "$(tput setaf 1)[FAIL]$(tput sgr0)"
+	echo ""
+	echo >&2 "Docker not found."
+	echo >&2 "Please install using 'brew install docker'."
 	exit 1
 }
 printOK
