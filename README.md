@@ -73,3 +73,12 @@ The setup script start the service on port 80 on the *'ui'* container. To see it
  * Creates and starts progrium/logspout under the name *'log'*
  * Creates and starts crosbymichael/dockerui under the name *'ui'*
  * Gives you some text
+
+## Uninstalling
+
+To completely remove all this script does issue the following commands:
+
+	boot2docker down
+	boot2docker delete
+	sudo rm /Library/LaunchDaemons/io.boot2docker.route.plist
+	sudo rm /etc/resolver/docker
