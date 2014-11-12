@@ -1,6 +1,12 @@
 # DockerBootstrapOSX
 
+## Description
+
 DockerBootstrapOSX is a little bootstrapping script that automates the installation of a Docker environment on a MacOS X machine.
+
+### Warning
+
+Do not use [Kitematic](kitematic.com) and plain Boot2Docker alongside each other. They will conflict with each other forcing a reinstall from scratch. Kitematic is a great product and good for those who wish to use Docker containers for development. You *can* make them work alongside each other but it's a bit fiddly of a work and you need some Docker internals knowledge. For beginners it's best to choose either.
 
 ## Quick Install
 
