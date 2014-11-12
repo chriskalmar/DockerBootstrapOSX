@@ -1,5 +1,15 @@
 # DockerBootstrapOSX
 
+ * [Description](#description)
+ * [Quick Install](#quick-install)
+ * [What will you have after install](#what-will-you-have-after-install)
+ * [Usage](#usage)
+   * [Further Reading](#further-reading)
+ * [What The Script Does](#what-the-script-does)
+ * [Uninstalling](#uninstalling)
+ * [Credits](#credits)
+
+
 ## Description
 
 DockerBootstrapOSX is a little bootstrapping script that automates the installation of a Docker environment on a MacOS X machine.
@@ -16,14 +26,6 @@ Then run the following commands:
 
 	curl -s https://raw.githubusercontent.com/JonGretar/DockerBootstrapOSX/master/setup.sh -o setup_docker.sh
 	bash setup_docker.sh
-
-## Usage
-
-To shut down the virtual machine(it does take a bit of memory) use the command `boot2docker down` and to start it up again use `boot2docker up`.
-
-The containers may not start up automatically with the VM. To start them use the command `docker start dns log ui`.
-
-Now read up on Docker. It's pretty simple to get started from this point.
 
 ## What will you have after install
 
@@ -56,6 +58,29 @@ Visit the [logspout](https://github.com/progrium/logspout) site for additional f
 DockerUI is a minimum Docker UI.
 
 The setup script start the service on port 80 on the *'ui'* container. To see it open [http://ui.docker/](http://ui.docker/) using your browser.
+
+## Usage
+
+To shut down the virtual machine(it does take a bit of memory) use the command `boot2docker down` and to start it up again use `boot2docker up`.
+
+The containers may not start up automatically with the VM. To start them use the command `docker start dns log ui`.
+
+Now read up on Docker. It's pretty simple to get started from this point.
+
+### Further Reading
+
+ * [Flurdy: Basic Docker](http://flurdy.com/docs/docker/docker_osx_ubuntu.html#docker)
+ * [Kitematic: Understanding Docker Volumes ](http://kitematic.com/blog/2014/09/10/understanding-docker-volumes.html)
+ * [LinuxMeerkat: Docker Tutorial](http://linuxmeerkat.wordpress.com/2014/07/21/docker-tutorial/)
+ * [Spritle: Beginners guide to Docker](http://www.spritle.com/blogs/2013/08/23/docker-for-beginners/)
+ * [DigitalOcean: Docker Explained: How To Containerize Python Web  pplications](https://www.digitalocean.com/community/tutorials/docker-explained-how-to-containerize-python-web-applications)
+ * [ServersForHackers: Getting Started with Docker](https://serversforhackers.com/articles/2014/ 3/20/getting-started-with-docker/)
+ * [Official Docker User Guide](https://docs.docker.com/userguide/)
+ * [The Docker Book](http://dockerbook.com/)
+ * [Dockerfile  mages](http://dockerfile.github.io/)
+ * [Official Docker Registry](https://registry.hub.docker.com/)
+ * [YouTube: Docker 101 Tutorial](https://www.youtube.com/watch?v=VeiUjkiqo9E)
+ * [Partial Continuous Deployment With Docker and SaltStack](http://bitjudo.com/blog/2014/05/13/partial-continuous-deployment-with-docker-and-saltstack/)
 
 
 ## What The Script Does
