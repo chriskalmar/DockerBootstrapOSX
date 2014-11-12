@@ -82,3 +82,12 @@ To completely remove all this script does issue the following commands:
 	boot2docker delete
 	sudo rm /Library/LaunchDaemons/io.boot2docker.route.plist
 	sudo rm /etc/resolver/docker
+
+## Credits
+
+This script was created by using scripts and info from these 2 sources:
+
+ * https://github.com/frosenberg/docker-dns-scripts
+ * https://github.com/kitematic/kitematic
+
+This is really mostly their work. I just merged it and packaged.
