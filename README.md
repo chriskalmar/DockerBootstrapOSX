@@ -31,9 +31,9 @@ Now read up on Docker. It's pretty simple to get started from this point.
 
 ### Container: [phensley/docker-dns](https://github.com/phensley/docker-dns)
 
-DockerDNS watches the docker system for new containers. It then adds them to it's DNS server as *CONTAINERNAME.docker* allowing you direct access to them.
+DockerDNS watches the docker system for new containers. It then adds them to it's DNS server as `CONTAINERNAME.docker` allowing you direct access to them.
 
-The Setup scripts maps port *53* to the Boot2Docker VM so the IP address will stay the same.
+The Setup scripts maps port *53* to the Boot2Docker VM so the IP address will stay the same. It then adds the dns server as a handler for `*.docker` domains
 
 ### Container: [progrium/logspout](https://github.com/progrium/logspout)
 
