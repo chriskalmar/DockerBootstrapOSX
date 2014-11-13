@@ -71,6 +71,7 @@ Now read up on Docker. It's pretty simple to get started from this point.
 
 ### Further Reading
 
+ * [Docker Cheat Sheet](https://github.com/wsargent/docker-cheat-sheet#docker-cheat-sheet)
  * [Flurdy: Basic Docker](http://flurdy.com/docs/docker/docker_osx_ubuntu.html#docker)
  * [Kitematic: Understanding Docker Volumes ](http://kitematic.com/blog/2014/09/10/understanding-docker-volumes.html)
  * [LinuxMeerkat: Docker Tutorial](http://linuxmeerkat.wordpress.com/2014/07/21/docker-tutorial/)
