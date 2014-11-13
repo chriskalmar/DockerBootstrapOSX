@@ -141,19 +141,19 @@ echo "nameserver $DOCKERIP" | sudo tee /etc/resolver/docker >/dev/null
 printOK
 
 echo "*** Creating the dns container (This will take a while) ..."
-docker run --name dns -d --restart=on-failure:10 -p 53:53 -p 53:53/udp \
+docker run --name dns -d -p 53:53 -p 53:53/udp --restart=always \
 	-v /var/run/docker.sock:/docker.sock phensley/docker-dns \
 	--domain docker --record boot2docker:$(boot2docker ip)  || true
 echo $?
 printOK
 
 echo "*** Creating the log container (This will take a while) ..."
-docker run --name log -d -e "PORT=80" --restart=on-failure:10 \
+docker run --name log -d -e "PORT=80" --restart=always \
 	-v=/var/run/docker.sock:/tmp/docker.sock progrium/logspout  || true
 printOK
 
 echo "*** Creating the ui container (This will take a while) ..."
-docker run --name ui -d -v /var/run/docker.sock:/docker.sock --restart=on-failure:10 \
+docker run --name ui -d -v /var/run/docker.sock:/docker.sock --restart=always \
 	crosbymichael/dockerui -p :80 -e /docker.sock  || true
 printOK
 
@@ -166,7 +166,7 @@ echo """
 
 The Boot2Docker virtual machine is now up. It's address is boot2docker.docker.
 You can shut it down and start it with $(tput setaf 3)boot2docker down$(tput sgr0) and $(tput setaf 3)boot2docker up$(tput sgr0).
-It is not set up to start automatically on bootup.
+It is not set up to start automatically on Mac workstation bootup.
 
 Image phensley/docker-dns is installed under container 'dns'. It will autmatically
 add dns for containers as CONTAINER_NAME.docker.

@@ -65,7 +65,7 @@ The setup script start the service on port 80 on the *'ui'* container. To see it
 
 To shut down the virtual machine(it does take a bit of memory) use the command `boot2docker down` and to start it up again use `boot2docker up`.
 
-The containers may not start up automatically with the VM. To start them use the command `docker start dns log ui`.
+The containers *may* sometimes not start up automatically with the VM. View running containers using the command `docker ps`. To start all of them use the command `docker start dns log ui`.
 
 Now read up on Docker. It's pretty simple to get started from this point.
 
