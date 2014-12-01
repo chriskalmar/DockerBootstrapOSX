@@ -154,7 +154,11 @@ printOK
 
 echo "*** Creating the ui container (This will take a while) ..."
 docker run --name ui -d -v /var/run/docker.sock:/docker.sock --restart=always \
-	crosbymichael/dockerui -p :80 -e /docker.sock  || true
+  crosbymichael/dockerui -p :80 -e /docker.sock  || true
+printOK
+
+echo "*** Installing nsenter ..."
+boot2docker ssh 'docker run --rm -v /var/lib/boot2docker:/target jpetazzo/nsenter'
 printOK
 
 
